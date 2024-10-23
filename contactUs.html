@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Old Oak Tree</title>
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="js/formSubmit.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header_liquid">
+            <h3 class="header_title"><a href="index.html">Old Oak Tree</a></h3>
+            <div><a class="header_home" href="index.html">Back home</a></div>
+        </div>
+    </header>
+    <section class="contactUs">
+        <div class="container">
+            <div class="description">
+                <h1>Get in touch</h1>
+                <p>Have any questions or want to know more about our property? We’d love to hear from you! Whether you need help with bookings or just want more details, feel free to reach out.</p>
+            </div>
+            <div id="message-container"></div>
+            <div class="form">
+                <div class="contact_information">
+                    <h3>Old Oak Tree</h3>
+                    <div class="information">
+                        <img src="icons/place.svg" alt=""/><p>42B Saffraan Ave, Die Boord, Stellenbosch, 7600</p>
+                    </div>
+                    <div class="information">
+                        <img src="icons/phone.svg" alt=""/><p>+27 84 303 1617</p>
+                    </div>
+                    <div class="information">
+                        <img src="icons/email.svg" alt=""/><p>info@oldoakrentals.com</p>
+                    </div>
+                </div>
+                <form action="/sendmail" method="POST">
+                    <h2>Send us a message below, and we’ll get back to you within 24 hours.</h2>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input class="message" type="text" id="message" name="message" placeholder="Message" required/>
+                    <button type="submit" id="submit">Submit</a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h1>Old Oak Tree</h1>
+        <div class="page_navigation">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="socials">
+            <a href="https://www.instagram.com/old_oak_rentals?igsh=MXEyNWFkMG1neXJ4ZA%3D%3D&utm_source=qr">
+                <img src="icons/instagram.svg" alt=""/>
+            </a>
+        </div>
+        <div class="line"></div>
+        <p>2024 Old Oak Tree. All rights reserved.</p>
+    </footer>
+</body>
+</html>
