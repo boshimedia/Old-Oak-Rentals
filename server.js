@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.post('/sendmail', (req, res) => {
+app.post('/send-email', (req, res) => {
     const { name, email, message } = req.body;
 
     let transporter = nodemailer.createTransport({
