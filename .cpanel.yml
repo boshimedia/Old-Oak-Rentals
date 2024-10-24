@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nao3263f0m0v/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp contactUs.html $DEPLOYPATH
+    - /bin/cp processForm.php $DEPLOYPATH
+    - /bin/cp styles/homepage.css $DEPLOYPATH/styles
+    - /bin/cp styles/contact.css $DEPLOYPATH/styles
+    - /bin/cp js/script.js $DEPLOYPATH/js
+    - /bin/cp js/formSubmit.js $DEPLOYPATH/js
+    - /bin/cp -r images/* $DEPLOYPATH/images
+    - /bin/cp -r icons/* $DEPLOYPATH/icons
