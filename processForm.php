@@ -10,16 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email";
 
     if (mail($to, $subject, $body, $headers)) {
-        // Redirect with success message
         header("Location: contactUs.html?success=true");
         exit();
     } else {
-        // Redirect with error message
         header("Location: contactUs.html?success=false");
         exit();
     }
 } else {
-    // Redirect if not a POST request
     header("Location: contactUs.html");
     exit();
 }
