@@ -24,12 +24,10 @@
                 </button>
             </div>
             <div class="header_information">
-                <!-- TODO: left bottom align text -->
                 <h1 class="welcome">Welcome to your <br>private <span class="escape">escape</span> in <br>Stellenbosch</h1>
                 <div class="header_buttons">
                     <button class="header_primary_button"><a href="#property">Explore property</a></button>
-                    <!-- TODO: Google maps link, target blank -->
-                    <button class="header_secondary_button"><a href="#location">View location</a></button>
+                    <button class="header_secondary_button"><a href="https://www.google.co.za/maps/place/42+Saffraan+Ave,+Die+Boord,+Stellenbosch,+7613/@-33.9460797,18.8431382,17z/data=!3m1!4b1!4m6!3m5!1s0x1dcdb2f07986d36f:0xc0cc82e93d85d9e5!8m2!3d-33.9460797!4d18.8457131!16s%2Fg%2F11c2gjrg_q?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">View location</a></button>
                 </div>
             </div>
         </div>
@@ -134,8 +132,7 @@
                 <img src="/icons/pool.svg" alt="Pool icon"/>
                 <p>Pool</p>
             </div>
-            <div>
-                <!-- TODO: Inline-text not overflow -->
+            <div class="pets">
                 <img src="/icons/pets.svg" alt="Pets icon"/>
                 <p>Pet Friendly</p>
             </div>
@@ -153,15 +150,12 @@
                 <div class="client_wrapper">
                     <div class="client_profile">
                         <img class="client_img" src="images/profileKeegan.webp" alt="Client profile picture"/>
-                        <div>
-                            <p class="client_username">Keegan.</p>
-                            <p class="client_date">1 week ago</p>
-                        </div>
+                        <p class="client_username">Keegan.</p>
+                        <p class="client_date">1 week ago</p>
                     </div>
-                    <div class="client_review">
+                    <div class="client_review_block">
                         <img class="starting_quote" src="images/quote_start.png" alt="Starting Quote"/>
-                        <div>
-                            <!-- TODO: Shorten client revies, add padding -->
+                        <div class="client_review">
                             <p>Nienka’s guest house was the cleanest and closest to home feeling, with such a great host and easy check-in and out, we truly enjoyed our stay and will definitely recommend it to others.</p>
                             <img class="stars" src="icons/stars.svg" alt="Star rating"/>
                         </div>
@@ -174,12 +168,11 @@
                         <p class="client_username">Oabile.</p>
                         <p class="client_date">3 weeks ago</p>
                     </div>
-                    <div class="client_review">
+                    <div class="client_review_block">
                         <img class="starting_quote" src="images/quote_start.png" alt="Starting Quote"/>
-                        <div>
+                        <div class="client_review">
                             <p>This was the cleanest place my family has ever stayed at and Nienka was extremely polite and friendly.
-                                The house is beautiful and spacious. Clean bathrooms and the best linen.
-                                Thank you for hosting us Nienka.</p>
+                                The house is beautiful and spacious.</p>
                             <img class="stars" src="icons/stars.svg" alt="Star rating"/>
                         </div>
                         <img class="ending_quote" src="images/quote_end.png" alt="Ending Quote"/>
@@ -191,10 +184,10 @@
                         <p class="client_username">Helene.</p>
                         <p class="client_date">September 2024</p>
                     </div>
-                    <div class="client_review">
+                    <div class="client_review_block">
                         <img class="starting_quote" src="images/quote_start.png" alt="Starting Quote"/>
-                        <div>
-                            <p>Beautiful home away from home! The stunning mountain view from the main bedroom was an added bonus. Easy self check-in. Kitchen had everything and more. I was impressed with the attention to detail of this place. Will highly recommend this place.</p>
+                        <div class="client_review">
+                            <p>Beautiful home away from home! The stunning mountain view from the main bedroom was an added bonus. Kitchen had everything and more. I was impressed with the attention to detail of this place.</p>
                             <img class="stars" src="icons/stars.svg" alt="Star rating"/>
                         </div>
                         <img class="ending_quote" src="images/quote_end.png" alt="Ending Quote"/>
@@ -206,36 +199,30 @@
                         <p class="client_username">Andre.</p>
                         <p class="client_date">September 2024</p>
                     </div>
-                    <div class="client_review">
+                    <div class="client_review_block">
                         <img class="starting_quote" src="images/quote_start.png" alt="Starting Quote"/>
-                        <div>
-                            <p>We had an extremely pleasant stay with Nienka. This venue is brand new. Everything is new and of high quality. We took an easy walk down The Eerste River Path, under the main road to Dorp Street where all the restaurants are. So close you don’t even need a car!
-                                The garden is inviting. Even though it was too cool, in summer, the very private pool would be thoroughly enjoyed.
-                                We are sure to book here again!</p>
+                        <div class="client_review">
+                            <p>We had an extremely pleasant stay at Nienka's. Everything is new and of high quality. We took a walk down The Eerste River Path, to Dorp Street where all the restaurants are, so close!</p>
                             <img class="stars" src="icons/stars.svg" alt="Star rating"/>
                         </div>
                         <img class="ending_quote" src="images/quote_end.png" alt="Ending Quote"/>
                     </div>
+                </div> 
+            </div>
+            <div class="slider">
+                <p>0<span id="currentIndex">1</span></p>
+                <div class="pill_indicators">
                 </div>
-            </div>
+                <p>0<span id="totalCount">4</span></p>
+                <button class="arrow" id="next"><img src="icons/thin_arrow_right.svg" alt=""/></button>
+            </div>    
         </div>
-        <div class="slider">
-            <!-- TODO: Number 24px : slider track color : add to grid a3 -->
-            <p>0<span id="currentIndex">1</span></p>
-            <div class="pill_indicators">
-            </div>
-            <p>0<span id="totalCount">4</span></p>
-            <button class="arrow" id="next"><img src="icons/thin_arrow_right.svg" alt=""/></button>
-        </div>     
     </section>    
     <section class="location" id="location">
         <p class="location_heading">Our Location</p>
         <p class="location_paragraph">Stellenbosch is pure magic! Picture lush vineyards, stunning mountain views, and a charming town filled with cozy cafes and historic spots. It’s all about great wine, beautiful scenery, and unforgettable moments. Whether you're here for a relaxing getaway or an adventure, Stellenbosch is the perfect escape.</p>
     </section>
-    <section class="stellenbosch_img">
-        <!-- TODO: Grow with screen should not squash -->
-        <img src="images/stellenbosch.webp" alt="Picture of Stellenbosch">
-    </section>
+    <img class="stellenbosch_img" src="images/stellenbosch.webp" alt="Image of Stellenbosch"/>
     <footer>
         <h1>Old Oak Tree</h1>
         <div class="page_navigation">
@@ -247,7 +234,12 @@
             <a href="https://www.instagram.com/old_oak_rentals?igsh=MXEyNWFkMG1neXJ4ZA%3D%3D&utm_source=qr" target="_blank">
                 <img src="icons/instagram.svg" alt="instagram icon"/>
             </a>
-            <!-- TODO: Add phone icon and whatsapp icon -->
+            <a href="https://wa.me/27843031617" target="_blank">
+                <img src="icons/whatsapp.svg" alt="whatsapp icon"/>
+            </a>
+            <a href="tel:27843031617" target="_blank">
+                <img src="icons/footer_phone.svg" alt="phone icon"/>
+            </a>
         </div>
         <div class="line"></div>
         <p>2024 Old Oak Tree. All rights reserved.</p>

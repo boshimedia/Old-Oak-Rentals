@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageContainer = document.getElementById('message-container');
 
     if (success === 'true') {
-        messageContainer.innerHTML = '<div class="success-message">Your message has been sent successfully! We will get back to you within 24 hours.</div>';
+        messageContainer.innerHTML = '<div class="success-message"><h3>Message sent</h3><p>Your message has been sent successfully!</p></div>';
     } else if (success === 'false') {
-        messageContainer.innerHTML = '<div class="error-message">There was an error sending your message. Please try again.</div>';
+        messageContainer.innerHTML = '<div class="error-message"><h3>Message error</h3><p>Please try resending your message.</p></div>';
     }
 });

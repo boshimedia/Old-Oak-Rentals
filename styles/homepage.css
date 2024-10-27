@@ -8,6 +8,10 @@
 header {
     width: 100%;
     background-image: url("../images/headerImage.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 .header_liquid {
@@ -50,16 +54,18 @@ header {
 }
 
 .header_information {
-    height: 720px;
-    padding: 120px 80px 120px 80px;
+    padding: 260px 80px 120px 80px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     gap: 24px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5704875700280112) 3%, rgba(255,255,255,0) 89%);
 }
 
 .welcome {
     font-size: 110px;
-    font-weight: 500;
+    font-weight: 400;
     color: #fff;
     text-transform: uppercase;
     line-height: 100%;
@@ -68,13 +74,17 @@ header {
 
 .escape {
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
     color: #92cdac;
 }
 
 .header_buttons {
     display: flex;
     gap: 18px;
+}
+
+.googleMaps {
+    display: none;
 }
 
 .header_primary_button {
@@ -158,22 +168,6 @@ header {
     height: 24px;
 }
 
-.pill_indicators {
-    display: flex;
-    justify-content: center;
-}
-
-.pill_indicators .pill {
-    width: 60px;
-    height: 5px;
-    background-color: lightgray;
-    transition: background-color 0.3s ease;
-}
-
-.pill_indicators .pill.active {
-    background-color: rgb(106, 106, 106);
-}
-
 .image_carousel_buttons {
     display: flex;
     justify-content: space-between;
@@ -210,9 +204,8 @@ header {
     display: flex;
     align-items: flex-start;
     gap: 100px;
-    align-self: stretch;
     padding: 162px 80px;
-    margin: 200px 80px 200px 80px;
+    margin: 200px 80px;
     flex-direction: column;
     border: 2px solid #526563;
     border-radius: 16px;
@@ -232,6 +225,13 @@ header {
     gap: 24px;
 }
 
+.pets {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .offer_title {
     align-self: stretch;
     color: #526563;
@@ -249,15 +249,7 @@ header {
     align-self: stretch;
 }
 
-.client_wrapper {
-    display: none;
-}
-
-.client_wrapper.active {
-    display: flex;
-    gap: 120px;
-}
-
+/* Client review slider wrapper */
 .client_reviews_container {
     background: #526563;
     padding: 180px 80px;
@@ -271,14 +263,6 @@ header {
     line-height: 74px;
 }
 
-.client_profile {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;
-    gap: 12px;
-}
-
 .client_desc {
     color: #fff;
     text-align: right;
@@ -286,6 +270,18 @@ header {
     font-size: 24px;
     font-weight: 200;
     line-height: 36px;
+}
+
+/* Client profile container */
+
+.client_wrapper {
+    display: none;
+}
+
+.client_wrapper.active {
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
 }
 
 .client_img {
@@ -307,28 +303,27 @@ header {
     color: #fff;
 }
 
-.client_review {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "starting_quote review_paragraph ."
-        ". review_paragraph ."
-        ". review_paragraph ending_quote";
-    margin-top: 80px;
+/* Client review section */
+
+.client_review_block {
+    display: flex;
+    padding: 50px;
 }
 
 .starting_quote {
-    grid-area: starting_quote;
     width: 95px;
     height: 80px;
-    margin-right: 24px;
 }
 
-.client_review div {
-    grid-area: review_paragraph;
+.client_review {
+    display: flex;
+    padding: 40px;
+}
+
+.client_review {
     display: flex;
     flex-direction: column;
+    padding: 0px 40px;
     gap: 24px;
 }
 
@@ -346,19 +341,36 @@ header {
 }
 
 .ending_quote {
-    grid-area: ending_quote;
     width: 95px;
     height: 80px;
-    margin-left: 24px;
 }
 
 .slider {
     display: flex;
-    margin-top: 100px;
     align-items: center;
     color: #fff;
     display: flex;
     gap: 12px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.pill_indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pill_indicators .pill {
+    width: 30px;
+    height: 1px;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+.pill_indicators .pill.active {
+    height: 6px;
+    background-color: #8BA8A5;
 }
 
 .arrow {
@@ -371,6 +383,8 @@ header {
     height: 12px;
     cursor: pointer;
 }
+
+/* Client review ends here */
 
 .location {
     margin: 180px 80px;
@@ -392,9 +406,9 @@ header {
     width: 800px;
 }
 
-.stellenbosch_img img {
-    height: 609px;
+.stellenbosch_img {
     width: 100%;
+    height: 100%;
 }
 
 footer {
@@ -427,23 +441,41 @@ footer a {
 }
 
 .line {
-    border: 1px solid #fff;
+    border: 1px solid rgba(255, 255, 255, 0.23);
     width: 100%;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.socials img {
+    width: 24px;
+    height: 24px;
 }
 
 @media (max-width: 1024px) {
     header {
         width: 100%;
     }
+
     .header_title {
         font-size: 16px;
     }
+
     .header_information {
-        padding: 0px 24px 80px 24px;
+        padding: 180px 24px 80px 24px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
     }
+
     .welcome {
         color: #FFF;
         font-size: 52px;
@@ -453,6 +485,7 @@ footer a {
         letter-spacing: -3.12px;
         text-transform: uppercase;
     }
+
     .header_buttons {
         display: flex;
         flex-direction: column;
@@ -493,7 +526,7 @@ footer a {
 
     .what_we_offer {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         padding: 32px 24px;
         margin: 24px 24px 48px 24px;
         border: 2px solid #526563;
@@ -532,7 +565,7 @@ footer a {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         gap: 12px;
     }
 
@@ -544,12 +577,15 @@ footer a {
         padding: 96px 24px;
     }
 
-    .client_review div {
+    .client_review_block {
+        padding: 0px;
+    }
+
+    .client_review {
         display: flex;
         flex-direction: column;
+        padding: 0px;
         gap: 24px;
-        align-items: flex-start;
-        flex: 1 1 0;
     }
 
     .client_title {
@@ -583,7 +619,10 @@ footer a {
     }
 
     .slider {
+        display: flex;
+        margin-top: 60px;
         justify-content: center;
+        gap: 40px;
     }
 
     .location {
@@ -621,6 +660,19 @@ footer a {
         font-size: 24px;
         line-height: 36px;
         letter-spacing: 12px;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .socials img {
+        width: 18px;
+        height: 18px;
     }
     
     .page_navigation {

@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars(trim($_POST['message']));
 
     $to = 'info@oldoakrentals.com';
-    $subject = "New message from $name";
+    $subject = "Old Oak Tree | Enquiry from: $name";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
     $headers = "From: $email";
 
