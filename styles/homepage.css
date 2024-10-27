@@ -664,6 +664,11 @@ footer a {
         flex-direction: row;
         gap: 8px;
     }
+
+    .stellenbosch_img img{
+        width: 100%;
+        height: 392px;
+    }
     
     .socials img {
         width: 18px;
