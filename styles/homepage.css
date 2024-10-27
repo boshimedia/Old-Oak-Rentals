@@ -579,13 +579,13 @@ footer a {
 
     .client_review_block {
         padding: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .client_review {
-        display: flex;
-        flex-direction: column;
         padding: 0px;
-        gap: 24px;
     }
 
     .client_title {
@@ -640,11 +640,6 @@ footer a {
 
     .location_paragraph {
         font-size: 24px;
-        width: 100%;
-    }
-
-    .stellenbosch_img {
-        height: 392px;
         width: 100%;
     }
 
