@@ -643,7 +643,7 @@ footer a {
         width: 100%;
     }
 
-    .stellenbosch_img img {
+    .stellenbosch_img {
         height: 392px;
         width: 100%;
     }
@@ -679,5 +679,7 @@ footer a {
         display: flex;
         gap: 24px;
         align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }
