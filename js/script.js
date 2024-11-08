@@ -76,20 +76,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const groupIndex = Array.from(imageGroups).indexOf(entry.target.closest('.image_group'));
+                const group = entry.target.closest('.image_group');
+                const groupIndex = Array.from(imageGroups).indexOf(group);
+
                 if (groupIndex !== -1) {
-                    currentIndex = groupIndex;
-                    updateButtonStyles();
+                    const isLastImage = entry.target === group.querySelector('img:last-child');
+                    const isFirstImage = entry.target === group.querySelector('img:first-child');
+
+                    if (isFirstImage || isLastImage) {
+                        currentIndex = groupIndex;
+                        updateButtonStyles();
+                    }
                 }
             }
         });
     }, observerOptions);
 
     imageGroups.forEach(group => {
-        const firstImage = group.querySelector('img');
-        if (firstImage) {
-            observer.observe(firstImage);
-        }
+        const firstImage = group.querySelector('img:first-child');
+        const lastImage = group.querySelector('img:last-child');
+        if (firstImage) observer.observe(firstImage);
+        if (lastImage) observer.observe(lastImage);
     });
 
     rightArrow.addEventListener('click', () => {
@@ -105,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
-
 
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
